@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "cypress:open:chrome": "npx cypress run -b chrome --headed",
-    "cypress:run:chrome": "npx cypress run -b chrome"
+    "cypress:open:chrome:direct": "npx cypress run -b chrome --headed --spec cypress/e2e/loginUsers.cy.js",
+    "cypress:run:chrome": "npx cypress run -b chrome",
+    "cypress:run:chrome:direct": "npx cypress run -b chrome --headed --spec cypress/e2e/pageObjectLoginUser.cy.js"
   },
   "keywords": [],
   "author": "",
