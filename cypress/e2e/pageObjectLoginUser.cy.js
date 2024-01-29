@@ -10,13 +10,14 @@ describe("User opens the GoIT page", () => {
     cy.visit("https://www.edu.goit.global/account/login");
   });
 
-    it("succesfully login user1 to the GoIT page", () => {
+  it("succesfully login user1 to the GoIT page", () => {
     cy.fixture("user1.json").then((user) => {
       const useremail = user.email;
       const password = user.password;
 
       loginPage.loginUser(useremail, password);
     });
+  });
 
     it("succesfully login user2 to the GoIT page", () => {
       cy.fixture("user2.json").then((user) => {
@@ -26,9 +27,9 @@ describe("User opens the GoIT page", () => {
         loginPage.loginUser(useremail, password);
       });
     });
+
+    afterEach("log out", () => {
+      homePage.logout();
+    });
   });
 
-  afterEach("log out", () => {
-    homePage.logout();
-  });
-});
