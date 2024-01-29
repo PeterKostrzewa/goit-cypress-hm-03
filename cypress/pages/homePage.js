@@ -1,10 +1,10 @@
 class HomePage {
   get openMenuButton() {
-    return cy.get('[data-test-id="CircularProgressbarWithChildren__children"]');
+    return cy.get('#open-navigation-menu-mobile');
   }
 
   get logoutButton() {
-    return cy.get('[data-valuetext="Log out"]');
+    return cy.contains('Log out');
   }
 
   logout() {

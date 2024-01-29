@@ -1,6 +1,5 @@
 import LoginPage from "./../pages/loginPage.js";
 import HomePage from "../pages/homePage.js";
-import { afterEach } from "mocha";
 
 const loginPage = new LoginPage();
 const homePage = new HomePage();
